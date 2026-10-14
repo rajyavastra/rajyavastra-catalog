@@ -1,0 +1,47 @@
+<div class="tools">
+  <input
+    type="search"
+    class="search"
+    placeholder="Search sarees"
+    aria-label="Search sarees"
+    [value]="query()"
+    (input)="query.set($any($event.target).value)"
+  />
+  <div class="chips" role="group" aria-label="Filter by category">
+    @for (c of categories(); track c) {
+      <button type="button" class="chip" [class.on]="c === category()" [attr.aria-pressed]="c === category()" (click)="category.set(c)">
+        {{ c }}
+      </button>
+    }
+  </div>
+</div>
+
+@if (!products()) {
+  <p class="note">Loading sarees…</p>
+} @else if (visible().length === 0) {
+  <p class="note">No sarees match your search. Try a different word or category.</p>
+} @else {
+  <ul class="grid">
+    @for (p of visible(); track p.id; let i = $index) {
+      <li class="drape" [style.animation-delay.ms]="i < 8 ? i * 90 : 0">
+        <a class="card" [routerLink]="['/product', p.id]" [class.sold]="!p.inStock">
+          <div class="photo">
+            @if (p.images[0]) {
+              <img [src]="p.images[0]" [alt]="p.name" width="600" height="600" loading="lazy" />
+            }
+            @if (!p.inStock) {
+              <span class="badge">Sold out</span>
+            }
+          </div>
+          <div class="info">
+            <h2>{{ p.name }}</h2>
+            @if (p.fabric) {
+              <p class="fabric">{{ p.fabric }}</p>
+            }
+            <p class="price">{{ p.price | currency: currency : 'symbol-narrow' }}</p>
+          </div>
+        </a>
+      </li>
+    }
+  </ul>
+}

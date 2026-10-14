@@ -1,0 +1,132 @@
+[
+  {
+    "id": "P001",
+    "name": "Kanjivaram Silk Saree",
+    "category": "Silk",
+    "fabric": "Pure silk",
+    "price": 389,
+    "description": "Rich maroon silk with a gold zari temple border and woven paisley pallu. 5.5 m saree with 0.8 m unstitched blouse piece. Dry clean only.",
+    "inStock": true,
+    "images": [
+      "assets/products/P001/1.jpg",
+      "assets/products/P001/2.jpg"
+    ]
+  },
+  {
+    "id": "P002",
+    "name": "Banarasi Silk Saree",
+    "category": "Silk",
+    "fabric": "Banarasi silk",
+    "price": 329,
+    "description": "Royal blue Banarasi silk with an all-over floral jaal and a broad gold border. Includes 0.8 m blouse piece. Dry clean only.",
+    "inStock": true,
+    "images": [
+      "assets/products/P002/1.jpg",
+      "assets/products/P002/2.jpg"
+    ]
+  },
+  {
+    "id": "P003",
+    "name": "Mysore Crepe Silk Saree",
+    "category": "Silk",
+    "fabric": "Crepe silk",
+    "price": 215,
+    "description": "Soft emerald crepe silk with a slim gold zari border. Light to drape and easy to carry for weddings and puja. Blouse piece included.",
+    "inStock": false,
+    "images": [
+      "assets/products/P003/1.jpg",
+      "assets/products/P003/2.jpg"
+    ]
+  },
+  {
+    "id": "P004",
+    "name": "Bandhani Cotton Silk Saree",
+    "category": "Festive",
+    "fabric": "Cotton silk",
+    "price": 158,
+    "description": "Hand-tied bandhani dots in mustard, red and green on a cotton silk base. A bright pick for Navratri, Diwali and family functions.",
+    "inStock": true,
+    "images": [
+      "assets/products/P004/1.jpg",
+      "assets/products/P004/2.jpg"
+    ]
+  },
+  {
+    "id": "P005",
+    "name": "Chanderi Cotton Saree",
+    "category": "Cotton",
+    "fabric": "Chanderi cotton",
+    "price": 96,
+    "description": "Sheer, lightweight chanderi in pastel pink with tiny silver motifs and a subtle border. Comfortable for long days.",
+    "inStock": true,
+    "images": [
+      "assets/products/P005/1.jpg",
+      "assets/products/P005/2.jpg"
+    ]
+  },
+  {
+    "id": "P006",
+    "name": "Tant Cotton Saree",
+    "category": "Cotton",
+    "fabric": "Handloom cotton",
+    "price": 84,
+    "description": "Crisp handloom tant cotton in ivory with a bold red border and small woven motifs. Breathable and ideal for everyday wear.",
+    "inStock": true,
+    "images": [
+      "assets/products/P006/1.jpg",
+      "assets/products/P006/2.jpg"
+    ]
+  },
+  {
+    "id": "P007",
+    "name": "Georgette Sequin Saree",
+    "category": "Party Wear",
+    "fabric": "Georgette",
+    "price": 142,
+    "description": "Flowing plum georgette with a sparkling sequin border. Lightweight and easy to drape for receptions and parties.",
+    "inStock": true,
+    "images": [
+      "assets/products/P007/1.jpg",
+      "assets/products/P007/2.jpg"
+    ]
+  },
+  {
+    "id": "P008",
+    "name": "Organza Embroidered Saree",
+    "category": "Party Wear",
+    "fabric": "Organza",
+    "price": 176,
+    "description": "Peach organza with hand-finished floral embroidery along the border and pallu. Crisp fall with a graceful shimmer.",
+    "inStock": true,
+    "images": [
+      "assets/products/P008/1.jpg",
+      "assets/products/P008/2.jpg"
+    ]
+  },
+  {
+    "id": "P009",
+    "name": "Patola Style Silk Saree",
+    "category": "Festive",
+    "fabric": "Silk blend",
+    "price": 248,
+    "description": "Geometric double-ikat inspired weave in red, blue and gold. A statement saree for weddings and festive evenings.",
+    "inStock": false,
+    "images": [
+      "assets/products/P009/1.jpg",
+      "assets/products/P009/2.jpg"
+    ]
+  },
+  {
+    "id": "P010",
+    "name": "Printed Chiffon Saree",
+    "category": "Party Wear",
+    "fabric": "Chiffon",
+    "price": 68,
+    "description": "Airy aqua chiffon with a multicolour floral print. Pairs easily with a plain blouse for brunches and casual events.",
+    "inStock": true,
+    "images": [
+      "assets/products/P010/1.jpg",
+      "assets/products/P010/2.jpg"
+    ]
+  }
+]

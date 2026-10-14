@@ -1,0 +1,62 @@
+.hero {
+  position: relative; overflow: hidden; color: #fff;
+  background: linear-gradient(135deg, #5a1228 0%, #7a1f3d 55%, #8e2a2f 100%);
+  padding: 22px 16px 34px;
+}
+.brand { position: relative; z-index: 2; display: flex; align-items: center; gap: 14px; max-width: 1100px; margin: 0 auto; color: inherit; text-decoration: none; }
+.brand:focus-visible { outline: 3px solid var(--gold-soft); outline-offset: 4px; border-radius: 12px; }
+.logo { flex: none; width: 64px; height: 64px; filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.35)); transform-origin: 50% 8%; animation: sway 6s ease-in-out infinite; }
+.names { display: flex; flex-direction: column; }
+.name { font-family: var(--serif); font-size: 1.95rem; font-weight: 700; letter-spacing: 0.01em; line-height: 1.1; color: var(--gold-soft); }
+.tag { font-size: 0.9rem; opacity: 0.88; margin-top: 3px; }
+
+/* silk waves */
+.wave { position: absolute; left: 0; bottom: 8px; width: 200%; height: 64px; animation: drift 22s linear infinite; }
+.wave path { fill: rgba(212, 169, 60, 0.14); }
+.w2 { bottom: 4px; height: 52px; animation-duration: 15s; animation-direction: reverse; }
+.w2 path { fill: rgba(255, 255, 255, 0.07); }
+
+/* marigold petals */
+.petal { position: absolute; top: -18px; width: 10px; height: 14px; border-radius: 80% 0 80% 0; background: #f2a516; opacity: 0.85; animation: fall 9s linear infinite; }
+.petal:nth-of-type(odd) { background: #e8741c; }
+.petal:nth-of-type(3n) { background: #f7c548; }
+.petal:nth-of-type(1) { left: 6%; animation-delay: 0s; }
+.petal:nth-of-type(2) { left: 20%; animation-delay: 3s; animation-duration: 11s; }
+.petal:nth-of-type(3) { left: 34%; animation-delay: 6s; }
+.petal:nth-of-type(4) { left: 52%; animation-delay: 1.5s; animation-duration: 10s; }
+.petal:nth-of-type(5) { left: 68%; animation-delay: 4.5s; }
+.petal:nth-of-type(6) { left: 82%; animation-delay: 7.5s; animation-duration: 12s; }
+.petal:nth-of-type(7) { left: 93%; animation-delay: 2.5s; }
+
+/* gold temple-border strip: unfurls once, then a shimmer passes across it */
+.zari {
+  position: absolute; left: 0; right: 0; bottom: 0; height: 14px; z-index: 3; overflow: hidden;
+  background: #4d0f22 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='14' viewBox='0 0 28 14'%3E%3Cpath d='M0 7 L7 0 L14 7 L21 0 L28 7 L21 14 L14 7 L7 14 Z' fill='%23d4a93c'/%3E%3Ccircle cx='14' cy='7' r='1.6' fill='%234d0f22'/%3E%3C/svg%3E") repeat-x;
+  animation: unfurl 1.4s cubic-bezier(0.22, 0.8, 0.3, 1) both;
+}
+.zari::after { content: ''; position: absolute; inset: 0; background: linear-gradient(100deg, transparent 30%, rgba(255, 255, 255, 0.75) 50%, transparent 70%); transform: translateX(-100%); animation: shimmer 6s ease-in-out 1.6s infinite; }
+
+main { max-width: 1100px; margin: 0 auto; padding: 8px 16px 40px; }
+.foot { text-align: center; color: var(--muted); font-size: 0.85rem; padding: 4px 16px 32px; }
+
+@keyframes sway { 0%, 100% { transform: rotate(-3deg); } 50% { transform: rotate(3deg); } }
+@keyframes drift { to { transform: translateX(-50%); } }
+@keyframes fall {
+  0% { transform: translate(0, 0) rotate(0deg); opacity: 0; }
+  10% { opacity: 0.85; }
+  50% { transform: translate(18px, 90px) rotate(160deg); }
+  100% { transform: translate(-10px, 190px) rotate(340deg); opacity: 0; }
+}
+@keyframes unfurl { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }
+@keyframes shimmer { 0% { transform: translateX(-100%); } 35%, 100% { transform: translateX(100%); } }
+
+@media (min-width: 640px) {
+  .hero { padding: 30px 24px 42px; }
+  .logo { width: 84px; height: 84px; }
+  .name { font-size: 2.6rem; }
+  .tag { font-size: 1.05rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .logo, .wave, .petal, .zari, .zari::after { animation: none; }
+  .petal { display: none; }
+}

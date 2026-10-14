@@ -1,0 +1,17 @@
+:root {
+  --bg: #f6f0f2;
+  --surface: #ffffff;
+  --ink: #2b1a20;
+  --muted: #6e5c62;
+  --line: #e6d8dd;
+  --accent: #7a1f3d;
+  --accent-soft: #e6aebf;
+  --gold: #c9962b;
+  --gold-soft: #f0d58a;
+  --peacock: #0f6270;
+  --serif: 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif;
+  --sans: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--sans); line-height: 1.45; }

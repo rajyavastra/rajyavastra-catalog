@@ -1,0 +1,23 @@
+<header class="hero">
+  <!-- Two slow silk waves drift sideways like cloth in a breeze -->
+  <svg class="wave w1" viewBox="0 0 2400 120" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 60 Q150 15 300 60 T600 60 T900 60 T1200 60 T1500 60 T1800 60 T2100 60 T2400 60 V120 H0 Z" />
+  </svg>
+  <svg class="wave w2" viewBox="0 0 2400 120" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 70 Q200 25 400 70 T800 70 T1200 70 T1600 70 T2000 70 T2400 70 V120 H0 Z" />
+  </svg>
+  @for (n of petals; track n) {
+    <span class="petal" aria-hidden="true"></span>
+  }
+
+  <a routerLink="/" class="brand" aria-label="{{ store.name }} home">
+    <img class="logo" src="logo.svg" alt="" width="64" height="64" />
+    <span class="names">
+      <span class="name">{{ store.name }}</span>
+      <span class="tag">{{ store.tagline }}</span>
+    </span>
+  </a>
+  <div class="zari" aria-hidden="true"></div>
+</header>
+<main><router-outlet /></main>
+<footer class="foot">{{ store.name }}. Prices shown in {{ store.currency }}. Message us to reserve a saree.</footer>

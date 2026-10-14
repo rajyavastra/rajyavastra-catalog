@@ -1,0 +1,31 @@
+.back { display: inline-block; padding: 12px 0; color: var(--accent); text-decoration: none; font-weight: 600; }
+.back:focus-visible, .btn:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.detail { display: grid; gap: 18px; }
+@media (min-width: 760px) { .detail { grid-template-columns: 1.1fr 1fr; gap: 36px; align-items: start; } }
+.main { position: relative; aspect-ratio: 1; background: var(--line); border-radius: 12px; overflow: hidden; }
+.main img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.badge { position: absolute; left: 12px; top: 12px; background: var(--ink); color: #fff; font-size: 0.85rem; padding: 5px 11px; border-radius: 6px; }
+.thumbs { display: flex; gap: 10px; margin-top: 10px; }
+.thumb { padding: 0; width: 68px; height: 68px; border-radius: 8px; overflow: hidden; border: 2px solid transparent; cursor: pointer; background: none; }
+.thumb.on { border-color: var(--accent); }
+.thumb:focus-visible { outline: 3px solid var(--accent-soft); }
+.thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.cat { margin: 0; color: var(--muted); font-size: 0.9rem; }
+h1 { font-family: var(--serif); font-size: 1.8rem; line-height: 1.2; margin: 4px 0 8px; }
+.fabric { margin: 6px 0 0; color: var(--muted); }
+.price { font-size: 1.5rem; font-weight: 700; color: var(--accent); margin: 0; }
+.stock { margin: 6px 0 16px; font-weight: 600; color: var(--peacock); }
+.stock.out { color: #9a3b2e; }
+.desc { line-height: 1.6; max-width: 60ch; }
+.actions { display: flex; gap: 10px; flex-wrap: wrap; margin: 20px 0 12px; }
+.btn { display: inline-block; text-align: center; text-decoration: none; font-weight: 600; padding: 13px 20px; border-radius: 10px; background: var(--accent); color: #fff; border: 2px solid var(--accent); flex: 1 1 200px; }
+.btn.alt { background: transparent; color: var(--accent); }
+.code { color: var(--muted); font-size: 0.85rem; }
+.missing { padding: 32px 0; text-align: center; color: var(--muted); }
+
+.main img { animation: fade 0.5s ease; }
+.main::after { content: ''; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(105deg, transparent 35%, rgba(255, 238, 190, 0.5) 50%, transparent 65%); transform: translateX(-120%); animation: shine 1.4s ease 0.3s 1 both; }
+.thumb.on { border-color: var(--gold); }
+@keyframes fade { from { opacity: 0.2; } to { opacity: 1; } }
+@keyframes shine { to { transform: translateX(120%); } }
+@media (prefers-reduced-motion: reduce) { .main img, .main::after { animation: none; } }
